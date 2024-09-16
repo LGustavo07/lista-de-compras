@@ -23,4 +23,31 @@
   --label: 400 1rem/140% var(--font-family);
   --paragraph: 500 1rem/150% var(--font-family);
   --link: 500 0.875rem/160% var(--font-family);
+
+  --font-input: 400 1rem/140% var(--font-family);
+}
+
+body {
+  font: inherit;
+
+  background: var(--background-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-brand);
+  font: var(--link);
+
+  &:hover {
+    color: var(--color-brand-hover);
+  }
+}
+
+.container {
+  max-width: 85.375rem;
+  padding-inline: 2rem;
+  margin: auto;
 }

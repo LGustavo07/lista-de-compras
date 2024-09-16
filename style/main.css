@@ -1,0 +1,16 @@
+main {
+  padding-block: 1.5625rem 8.5625rem;
+  & > a#logo {
+    display: block;
+    text-align: center;
+    padding-bottom: 3.875rem;
+    & > img {
+      max-width: 9.719375rem;
+    }
+  }
+  & > h1 {
+    font: var(--title);
+    color: var(--content-primary);
+    padding-block: 1rem 2.75rem;
+  }
+}
