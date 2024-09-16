@@ -1,0 +1,37 @@
+div[role="list"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+
+  & div[role="listitem"] {
+    height: 3.0625rem;
+    background-color: var(--color-background-secondary);
+    border-radius: 0.75rem;
+    font: var(--font-paragraph);
+    color: var(--color-content-secondary);
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-inline: 0.75rem;
+
+    & > span {
+      flex: 1;
+    }
+
+    & > img[src*="rubbish-bin"] {
+      width: 2rem;
+      height: 2rem;
+      &:hover {
+        filter: invert(26%) sepia(28%) saturate(3775%) hue-rotate(298deg)
+          brightness(87%) contrast(93%);
+      }
+    }
+  }
+}
+
+#list img[src="./assets/rubbish-bin.svg"] {
+  cursor: pointer;
+}

@@ -1,27 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de compras</title>
+    <title>quicklist</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style/index.css" />
+
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
+
   <body>
     <main class="container">
       <a href="#" id="logo">
-        <img src="assets/logo.svg" alt="" />
+        <img src="./assets/logo.svg" alt="logotipo" />
       </a>
       <div>
-        <a href="#"><img src="assets/arrow.svg" alt="Voltar" /></a>
+        <a href="#">&lt;- Voltar</a>
       </div>
       <h1>Compras da semana</h1>
+      <form>
+        <div class="input-wrapper">
+          <div>
+            <input type="text" id="item" placeholder="Adicione um novo item" />
+            <button type="submit">Adicionar item</button>
+          </div>
+          <span class="input-warning hidden">
+            <img
+              src="./assets/red-warning-circle.svg"
+              alt="ícone com exclamação"
+            />
+            <small>O campo precisa ser preenchido!</small>
+          </span>
+        </div>
+        <div role="list" id="list">
+          <!-- Itens de exemplo -->
+          <div role="listitem">
+            <input type="checkbox" name="" id="" />
+            <span>Pão de forma</span>
+            <img src="./assets/rubbish-bin.svg" alt="lixeira" />
+          </div>
+          <div role="listitem">
+            <input type="checkbox" name="" id="" />
+            <span>Café</span>
+            <img src="./assets/rubbish-bin.svg" alt="lixeira" />
+          </div>
+          <div role="listitem">
+            <input type="checkbox" name="" id="" />
+            <span>Bolacha</span>
+            <img src="./assets/rubbish-bin.svg" alt="lixeira" />
+          </div>
+        </div>
+        <div class="warning hidden" id="warning-message">
+          <img src="./assets/warning-circle.svg" alt="ícone com exclamação" />
+          <span> O item <span class="item"></span> foi removido da lista </span>
+          <img
+            src="./assets/close.svg"
+            alt="ícone de fechar a mensagem"
+            id="close-warning"
+          />
+        </div>
+      </form>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>

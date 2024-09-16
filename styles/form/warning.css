@@ -1,0 +1,28 @@
+.warning {
+  font: var(--font-label);
+  color: var(--color-always-white);
+  background-color: var(--color-danger);
+  border-radius: 0.75rem;
+  margin-top: 2.25rem;
+  padding: 0.75rem;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  & > span {
+    flex: 1;
+  }
+  & > img[src*="close"] {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  & > img[src*="warning-circle"] {
+    width: 1.166875rem;
+    height: 1.166875rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
